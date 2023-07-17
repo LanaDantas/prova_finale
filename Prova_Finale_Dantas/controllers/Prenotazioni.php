@@ -1,0 +1,7 @@
+<?php
+$readAll = $pdo->query(
+    "SELECT v.COGNOME, v.NOME, b.TIPO_PAGAMENTO, b.QUANTITA, b.DATA, b.FASCIA_ORARIA,
+    b.COD_OPERAZIONE, m.TITOLO, s.NOME_SEDE FROM biglietti AS b
+    JOIN visitatori AS v ON v.COD_VISITATORE=b.COD_VISITATORE
+    JOIN mostre AS m ON m.COD_MOSTRA=b.COD_MOSTRA
+    JOIN sedi AS s ON s.COD_SEDE=m.COD_SEDE"); 
