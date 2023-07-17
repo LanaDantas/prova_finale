@@ -8,6 +8,10 @@ $_SESSION['id_mostra'] =  $id_mostra;
 
 $cod_visitatore = $_SESSION['COD_VISITATORE'];
 
+/* var_dump($cod_visitatore);
+var_dump($id_mostra); */
+
+
 if (!isset($_SESSION['COD_VISITATORE'])) {
     echo '<script>alert("Fai prima il login!");
             window.location.href = "http://localhost/Prova_Finale_Dantas/views/login/login.php";
@@ -25,6 +29,16 @@ if (!isset($_SESSION['COD_VISITATORE'])) {
             <!-- Hero Section -->
             <div class="hero__container">
                 <p class="hero__description">RIEPILOGO DELLE PRENOTAZIONI</p>
+
+                <?php
+                if (isset($_GET['success'])) {
+                    $success = $_GET['success'];
+                    if ($success == 1) {
+                        echo '<div class="success_biglietto">Prenotazione effetuata con sucesso!</div>';
+                    }
+                }
+                ?>
+
                 <?php $data = $pdo->query("SELECT * FROM visitatori WHERE COD_VISITATORE = '$cod_visitatore'")->fetchAll(); ?>
                 <?php foreach ($data as $row) : ?>
                     <h1 class="hero__heading hr2"> Benvenuto/a <span><?php echo $row['NOME']; ?>,</span></h1>
@@ -40,7 +54,7 @@ if (!isset($_SESSION['COD_VISITATORE'])) {
 
                             <?php $data = $pdo->query("SELECT * FROM visitatori WHERE COD_VISITATORE = '$cod_visitatore'")->fetchAll(); ?>
                             <?php foreach ($data as $row) : ?>
-                                <input type="text" name="COD_VISITATORE" value="<?php echo $cod_visitatore ?>">
+                                <input type="hidden" name="COD_VISITATORE" value="<?php echo $row['COD_VISITATORE'] ?>">
                             <?php endforeach; ?>
 
                             <label for="data">Scegli una data</label>
@@ -68,7 +82,7 @@ if (!isset($_SESSION['COD_VISITATORE'])) {
 
                             <?php $data = $pdo->query("SELECT * FROM mostre WHERE COD_MOSTRA = '$id_mostra'")->fetchAll(); ?>
                             <?php foreach ($data as $row) : ?>
-                                <input type="text" name="COD_MOSTRA" value="<?php echo $id_mostra ?>">
+                                <input type="hidden" name="COD_MOSTRA" value="<?php echo $row['COD_MOSTRA'] ?>">
                             <?php endforeach; ?>
                         </div>
                     </div>

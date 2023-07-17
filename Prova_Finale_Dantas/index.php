@@ -1,0 +1,1 @@
+<?php header('Location: http://localhost/Prova_Finale_Dantas/views/homepage/homepage.php'); ?>

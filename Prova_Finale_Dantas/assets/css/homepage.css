@@ -433,6 +433,7 @@
   outline: none;
 }
 
+.main__btn a,
 .main__btn span {
   position: relative;
   z-index: 2;
@@ -488,6 +489,18 @@
   text-transform: uppercase;
   font-size: 15px;
   text-shadow: -2px 0 #12d8fa, -1px -1px #ff0844;
+}
+
+.success_biglietto {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-decoration: 3px underline #38e17e;
+  margin-bottom: 15px;
+}
+
+input[type="number" ] {
+  text-align: center;
 }
 
 .fa-layer-group,
