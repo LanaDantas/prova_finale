@@ -46,7 +46,7 @@ if (!isset($_SESSION['COD_VISITATORE'])) {
                             <label for="data">Scegli una data</label>
                             <input type="date" name="DATA" id="data">
 
-                            <select id="fascia_oraria" name="fascia_oraria" data-selected="">
+                            <select id="fascia_oraria" name="FASCIA_ORARIA" data-selected="">
                                 <option value="" selected="selected" disabled="disabled">Scegli una fascia oraria</option>
                                 <option value="1">10.00 - 12.00</option>
                                 <option value="2">12.00 - 14.00</option>
@@ -55,7 +55,7 @@ if (!isset($_SESSION['COD_VISITATORE'])) {
                                 <option value="5">18.00 - 20.00</option>
                             </select>
 
-                            <select id="selectbox" data-selected="">
+                            <select id="selectbox" data-selected="" name="TIPO_PAGAMENTO">
                                 <option value="" selected="selected" disabled="disabled">Scegli metodo di pagamento</option>
                                 <option value="CARTA">Carta</option>
                                 <option value="BONIFICO">Bonifico</option>
@@ -63,8 +63,9 @@ if (!isset($_SESSION['COD_VISITATORE'])) {
                             </select>
 
 
-                            <label for="COD_MOSTRA">N° Biglietti</label>
-                            <input type="number" name="COD_MOSTRA" id="COD_MOSTRA">
+                            <label for="QUANTITA">N° Biglietti</label>
+                            <input type="number" name="QUANTITA" id="QUANTITA">
+
                             <?php $data = $pdo->query("SELECT * FROM mostre WHERE COD_MOSTRA = '$id_mostra'")->fetchAll(); ?>
                             <?php foreach ($data as $row) : ?>
                                 <input type="text" name="COD_MOSTRA" value="<?php echo $id_mostra ?>">

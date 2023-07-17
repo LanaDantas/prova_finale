@@ -52,4 +52,5 @@ if ($count_data == 0) {
     echo "Inserimento effettuato con successo!";
 } catch (PDOException $e) {
     echo "Errore: " . $e->getMessage();
+    var_dump($e);
 }
