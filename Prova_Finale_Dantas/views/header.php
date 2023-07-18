@@ -37,7 +37,7 @@ $jsPaths = [
     <!-- Navbar Section -->
     <nav class="navbar">
         <div class="navbar__container">
-            <a href="http://localhost/Prova_Finale_Dantas/views/homepage/homepage.php" id="navbar__logo">
+            <a href="http://localhost/Prova_Finale_Dantas/views/homepage/homepage.php#home" id="navbar__logo">
                 <i class="fa-solid fa-building-columns"></i>
             </a>
             <div class="navbar__toggle" id="mobile-menu">
@@ -60,11 +60,11 @@ $jsPaths = [
                 <li class="navbar__item">
                     <a href="http://localhost/Prova_Finale_Dantas/views/homepage/homepage.php#gam" class="navbar__links" id="gam-page">GAM</a>
                 </li>
-                <li class="navbar__item">
+                <!-- <li class="navbar__item">
                     <a href="http://localhost/Prova_Finale_Dantas/views/prenotazioni/prenotazioni.php" class="navbar__links" id="prenotazioni-page">
                         <i class="fa-brands fa-opencart"></i>
                     </a>
-                </li>
+                </li> -->
 
                 <?php
                 if (!isset($_SESSION['COD_VISITATORE'])) { ?>

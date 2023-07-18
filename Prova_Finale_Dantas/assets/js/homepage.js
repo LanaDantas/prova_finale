@@ -24,7 +24,15 @@ const highlightMenu = () => {
   // console.log(scrollPos);
 
   // adds 'highlight' class to my menu items
-  if (window.innerWidth > 960 && scrollPos < 1000) {
+  if (window.innerWidth > 960 && scrollPos < 600) {
+    ducaleMenu.classList.remove('highlight');
+    diamantiMenu.classList.remove('highlight');
+    museoforiMenu.classList.remove('highlight');
+    gamMenu.classList.remove('highlight');
+    maoMenu.classList.remove('highlight');
+    prenotazioniMenu.classList.remove('highlight');
+    return;
+  } else if (window.innerWidth > 960 && scrollPos < 1000) {
     ducaleMenu.classList.add('highlight');
     diamantiMenu.classList.remove('highlight');
     museoforiMenu.classList.remove('highlight');

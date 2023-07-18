@@ -1,13 +1,12 @@
 <?php
  require "../../config.php";
 session_start();
-$_SESSION['cod_visitatore'];
-
 
 if (isset($_SESSION['COD_VISITATORE'])) {
   $cod_visitatore = $_SESSION['COD_VISITATORE'];
 }
-/* var_dump($cod_visitatore); */
+// var_dump($cod_visitatore);
+
 ?>
 
 <?php require "../header.php";
@@ -48,7 +47,7 @@ if (isset($_SESSION['COD_VISITATORE'])) {
         </div>
         <h4>Prenota subito il tuo biglietto</h4>
         <p>Stagione d'opera e balletto, concerti, altre attività e servizi di uno dei più grandi teatri d'Europa.</p>
-        <button class="main__btn"><a href="../mostre/mostre.php?id_sede=<?php echo $row['COD_SEDE'] ?>">GUARDA LE MOSTRE</a></button>
+        <a href="../mostre/mostre.php?id_sede=<?php echo $row['COD_SEDE'] ?>"><button class="main__btn"><span>GUARDA LE MOSTRE</span></button></a>
       </div>
     </div>
   </div>
@@ -78,7 +77,7 @@ if (isset($_SESSION['COD_VISITATORE'])) {
         </div>
         <h2>Prenota subito il tuo biglietto</h2>
         <p>Schedule a call to learn more about our services</p>
-        <button class="main__btn"><a href="../mostre/mostre.php?id_sede=<?php echo $row['COD_SEDE'] ?>">GUARDA LE MOSTRE</a></button>
+        <a href="../mostre/mostre.php?id_sede=<?php echo $row['COD_SEDE'] ?>"><button class="main__btn"><span>GUARDA LE MOSTRE</span></button></a>
       </div>
     </div>
   </div>
@@ -110,7 +109,7 @@ if (isset($_SESSION['COD_VISITATORE'])) {
         </div>
         <h2>Prenota subito il tuo biglietto</h2>
         <p>Schedule a call to learn more about our services</p>
-        <button class="main__btn"><a href="../mostre/mostre.php?id_sede=<?php echo $row['COD_SEDE'] ?>">GUARDA LE MOSTRE</a></button>
+        <a href="../mostre/mostre.php?id_sede=<?php echo $row['COD_SEDE'] ?>"><button class="main__btn"><span>GUARDA LE MOSTRE</span></button></a>
       </div>
     </div>
   </div>
@@ -141,7 +140,7 @@ if (isset($_SESSION['COD_VISITATORE'])) {
         </div>
         <h2>Prenota subito il tuo biglietto</h2>
         <p>Schedule a call to learn more about our services</p>
-        <button class="main__btn"><a href="../mostre/mostre.php?id_sede=<?php echo $row['COD_SEDE'] ?>">GUARDA LE MOSTRE</a></button>
+        <a href="../mostre/mostre.php?id_sede=<?php echo $row['COD_SEDE'] ?>"><button class="main__btn"><span>GUARDA LE MOSTRE</span></button></a>
       </div>
     </div>
   </div>
@@ -172,14 +171,14 @@ if (isset($_SESSION['COD_VISITATORE'])) {
         </div>
         <h2>Prenota il tuo biglietto</h2>
         <p>Schedule a call to learn more about our services</p>
-        <button class="main__btn"><a href="../mostre/mostre.php?id_sede=<?php echo $row['COD_SEDE'] ?>">GUARDA LE MOSTRE</a></button>
+        <a href="../mostre/mostre.php?id_sede=<?php echo $row['COD_SEDE'] ?>"><button class="main__btn"><span>GUARDA LE MOSTRE</span></button>
       </div>
     </div>
   </div>
 <?php endforeach; ?>
 
 <!-- Features Section -->
-<div class="main" id="sign-up">
+<!-- <div class="main" id="sign-up">
   <div class="main__container">
     <div class="main__content">
       <h1>Per acquistare i biglietti</h1>
@@ -193,6 +192,6 @@ if (isset($_SESSION['COD_VISITATORE'])) {
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <?php include('../footer.php'); ?>

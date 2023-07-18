@@ -1,15 +1,16 @@
 <?php
 require "../../config.php";
 session_start();
-$_SESSION['COD_VISITATORE'];
+
 if (isset($_SESSION['COD_VISITATORE'])) {
     $cod_visitatore = $_SESSION['COD_VISITATORE'];
   }
 
 $id_sede = $_GET['id_sede'];
 $_SESSION['id_sede'] = $id_sede;
-/* print_r($id_sede); */
 
+// print_r($id_sede); 
+// var_dump( $_SESSION['COD_VISITATORE']);
 ?>
 
 <?php require "../header.php"; ?>

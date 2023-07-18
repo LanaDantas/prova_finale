@@ -62,6 +62,7 @@
   display: flex;
   align-items: center;
   list-style: none;
+  gap: 25px;
 }
 
 .navbar__item {
@@ -276,6 +277,12 @@
   font-size: 50px;
 }
 
+.hero__heading.hr2.hr3 {
+  font-size: 30px;
+  text-align: center;
+  text-shadow: -2px 0 #12d8fa, -1px -1px #ff0844;
+}
+
 .hero__description {
   font-size: 60px;
   background: #da22ff;
@@ -338,13 +345,19 @@
   padding: 0 50px;
 }
 
+.main__container.m1 {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin-bottom: 50px;
+}
+
 .main__content {
   color: #fff;
   width: 100%;
 }
 
 .main__content h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   background-color: #fe3b6f;
   background-image: linear-gradient(to top, #ff087b 0%, #ed1a52 100%);
   background-size: 100%;
@@ -433,7 +446,7 @@
   outline: none;
 }
 
-.main__btn a,
+.main__btn,
 .main__btn span {
   position: relative;
   z-index: 2;
@@ -461,6 +474,10 @@
   width: 100%;
 }
 
+.btn_riepilogo {
+  margin-bottom: 50px;
+}
+
 .main__img--container {
   text-align: center;
 }
@@ -485,10 +502,24 @@
   margin-bottom: 15px;
 }
 
-.main__img--card label {
+.main__img--card label,
+.label,
+.label2 {
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 17px;
   text-shadow: -2px 0 #12d8fa, -1px -1px #ff0844;
+}
+
+.label2 {
+  background: #ee0979;
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -mo-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 .success_biglietto {
@@ -822,10 +853,12 @@ select:is(:focus, :hover, :visited) {
   transition: all 0.3s ease;
 }
 
-#selectbox option {
+#selectbox option,
+#fascia_oraria option {
   border: 1px solid #282b2b;
   background: #ff512f;
   background: linear-gradient(to right, #dd2476, #ff512f);
+  color: #282b2b;
 }
 
 @keyframes loading {

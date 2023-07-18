@@ -1,16 +1,11 @@
 <?php
 require "../../config.php";
 session_start();
-$_SESSION['cod_visitatore'];
-
-$id_mostra = $_GET['id_mostra'];
-$_SESSION['id_mostra'] =  $id_mostra;
 
 $cod_visitatore = $_SESSION['COD_VISITATORE'];
 
-/* var_dump($cod_visitatore);
-var_dump($id_mostra); */
-
+$id_mostra = $_GET['id_mostra'];
+$_SESSION['id_mostra'] =  $id_mostra;
 
 if (!isset($_SESSION['COD_VISITATORE'])) {
     echo '<script>alert("Fai prima il login!");
@@ -19,6 +14,9 @@ if (!isset($_SESSION['COD_VISITATORE'])) {
     exit();
 } else if (isset($_SESSION['COD_VISITATORE'])) {
     $cod_visitatore = $_SESSION['COD_VISITATORE'];
+
+// var_dump($cod_visitatore);
+// var_dump($id_mostra);
 
 ?>
     <?php require "../header.php"; ?>
@@ -43,7 +41,7 @@ if (!isset($_SESSION['COD_VISITATORE'])) {
                 <?php foreach ($data as $row) : ?>
                     <h1 class="hero__heading hr2"> Benvenuto/a <span><?php echo $row['NOME']; ?>,</span></h1>
                 <?php endforeach; ?>
-                <div class="main__container">
+                <div class="main__container m1">
                     <div class="main__img--container">
                         <div class="main__img--card" id="card-2">
 
@@ -75,7 +73,6 @@ if (!isset($_SESSION['COD_VISITATORE'])) {
                                 <option value="BONIFICO">Bonifico</option>
                                 <option value="PAYPAL">PayPal</option>
                             </select>
-
 
                             <label for="QUANTITA">N° Biglietti</label>
                             <input type="number" name="QUANTITA" id="QUANTITA">
